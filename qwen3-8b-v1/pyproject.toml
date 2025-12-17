@@ -1,0 +1,77 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "flowertune-code-v1"
+version = "1.0.0"
+description = ""
+license = "Apache-2.0"
+dependencies = [
+    "flwr[simulation]>=1.22.0",
+    "flwr-datasets>=0.5.0",
+    "torch==2.4.0",
+    "trl==0.8.1",
+    "bitsandbytes==0.45.4",
+    "scipy==1.13.0",
+    "peft==0.14.0",
+    "transformers==4.51.0",
+    "sentencepiece==0.2.0",
+    "omegaconf==2.3.0",
+    "hf_transfer==0.1.8",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[tool.flwr.app]
+publisher = "zerooneai"
+
+[tool.flwr.app.components]
+serverapp = "mmfl.server_app:app"
+clientapp = "mmfl.client_app:app"
+
+[tool.flwr.app.config]
+model.name = "Qwen/Qwen3-8B"
+model.quantization = 4
+model.gradient-checkpointing = true
+model.trust_remote_code = true
+model.lora.peft-lora-r = 8
+model.lora.peft-lora-alpha = 16
+model.lora.peft_lora_target_modules = 'all'
+model.lora.use-dora = true
+train.save-every-round = 5
+train.learning-rate-max = 5e-5
+train.learning-rate-min = 5e-6
+train.seq-length = 512
+task.name = "code"
+train.training-arguments.output-dir = ""
+train.training-arguments.learning-rate = ""
+train.training-arguments.per-device-train-batch-size = 2
+train.training-arguments.gradient-accumulation-steps = 4
+train.training-arguments.logging-steps = 10
+train.training-arguments.num-train-epochs = 3
+train.training-arguments.max-steps = 10
+train.training-arguments.save-steps = 1000
+train.training-arguments.save-total-limit = 10
+train.training-arguments.gradient-checkpointing = true
+train.training-arguments.lr-scheduler-type = "constant"
+train.training-arguments.bf16 = true
+train.training-arguments.tf32 = true
+train.training-arguments.optim = "paged_adamw_8bit"
+strategy.fraction-train = 0.2
+strategy.fraction-evaluate = 0
+strategy.use-flexlora = false
+num-server-rounds = 10
+
+[tool.flwr.app.config.static]
+dataset.name = "flwrlabs/code-alpaca-20k"
+
+[tool.flwr.federations]
+default = "local-simulation"
+
+[tool.flwr.federations.local-simulation]
+options.num-supernodes = 10
+options.backend.client-resources.num-cpus = 6
+options.backend.client-resources.num-gpus = 1.0
+

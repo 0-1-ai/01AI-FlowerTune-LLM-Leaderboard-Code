@@ -1,0 +1,21 @@
+Communication budget: used 177.46 MB (+177.46 MB this round) / 200,000 MB
+Communication budget: used 354.93 MB (+177.46 MB this round) / 200,000 MB
+Communication budget: used 532.39 MB (+177.46 MB this round) / 200,000 MB
+Communication budget: used 709.86 MB (+177.46 MB this round) / 200,000 MB
+Communication budget: used 887.32 MB (+177.46 MB this round) / 200,000 MB
+Communication budget: used 1064.78 MB (+177.46 MB this round) / 200,000 MB
+Communication budget: used 1242.25 MB (+177.46 MB this round) / 200,000 MB
+Communication budget: used 1419.71 MB (+177.46 MB this round) / 200,000 MB
+Communication budget: used 1597.18 MB (+177.46 MB this round) / 200,000 MB
+Communication budget: used 1774.64 MB (+177.46 MB this round) / 200,000 MB
+Communication budget: used 1952.11 MB (+177.46 MB this round) / 200,000 MB
+Communication budget: used 2129.57 MB (+177.46 MB this round) / 200,000 MB
+Communication budget: used 2307.03 MB (+177.46 MB this round) / 200,000 MB
+Communication budget: used 2484.50 MB (+177.46 MB this round) / 200,000 MB
+Communication budget: used 2661.96 MB (+177.46 MB this round) / 200,000 MB
+Communication budget: used 2839.43 MB (+177.46 MB this round) / 200,000 MB
+Communication budget: used 3016.89 MB (+177.46 MB this round) / 200,000 MB
+Communication budget: used 3194.35 MB (+177.46 MB this round) / 200,000 MB
+Communication budget: used 3371.82 MB (+177.46 MB this round) / 200,000 MB
+Communication budget: used 3549.28 MB (+177.46 MB this round) / 200,000 MB
+
