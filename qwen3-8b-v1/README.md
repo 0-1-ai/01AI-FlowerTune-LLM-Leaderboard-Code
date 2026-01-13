@@ -5,7 +5,7 @@ Federated instruction tuning for the **Code** challenge using `Qwen/Qwen3-8B` on
 ## Project Structure
 ```
 .
-├── flowertune-code/              # Source code for ClientApp, ServerApp, and Strategy
+├── mmfl/                         # Source code for ClientApp, ServerApp, and Strategy
 ├── flowertune-eval-code/         # Evaluation scripts and instructions
 ├── pyproject.toml                # Project configuration and dependencies
 └── README.md                     # This file
